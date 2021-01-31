@@ -8,7 +8,6 @@ namespace MyConsoleApp
         {
             Console.WriteLine($"{nameof(MyConsoleApp)} {DateTime.UtcNow}");
             Console.WriteLine("Press any key to close");
-            a = 1;
             Console.ReadKey();
         }
     }
