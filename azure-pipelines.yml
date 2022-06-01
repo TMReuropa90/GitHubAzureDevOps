@@ -39,8 +39,8 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'Test'
     testType: 'app'
-    targetFile: 'GitHubAzureDevOps'
+    targetFile: 'GitHubAzureDevOps/MyConsoleApp/'
     monitorWhen: 'always'
     failOnIssues: true
-    projectName: 'PipelineTest'
+    projectName: 'PipelineAzure'
     organization: 'b94ca70a-c110-4f1e-a54f-98475562885b'
