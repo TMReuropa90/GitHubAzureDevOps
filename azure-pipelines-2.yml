@@ -2,7 +2,8 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'linux-latest'
+
 
 variables:
   solution: '**/*.sln'
@@ -26,3 +27,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'Test'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
+    projectName: 'Trend Micro'
+    organization: 'b94ca70a-c110-4f1e-a54f-98475562885b'
