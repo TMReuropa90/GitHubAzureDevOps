@@ -33,7 +33,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: SnykSecurityScan@0
+- task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'Test' # Replace this with your own service connection name
     testType: 'app'
