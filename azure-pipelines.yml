@@ -15,6 +15,9 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
+
+
+steps:
 - task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'Test'
@@ -24,8 +27,6 @@ variables:
     failOnIssues: true
     projectName: 'PipelineSnyk'
     organization: 'b94ca70a-c110-4f1e-a54f-98475562885b'
-
-steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
