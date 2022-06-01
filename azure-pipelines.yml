@@ -18,15 +18,6 @@ variables:
 
 
 steps:
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'Test'
-    testType: 'app'
-    targetFile: 'MyConsoleApp/MyConsoleApp.csproj'
-    monitorWhen: 'always'
-    failOnIssues: true
-    projectName: 'PipelineSnyk'
-    organization: 'b94ca70a-c110-4f1e-a54f-98475562885b'
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -43,3 +34,12 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'Test'
+    testType: 'app'
+    targetFile: '/MyConsoleApp/MyConsoleApp.csproj'
+    monitorWhen: 'always'
+    failOnIssues: true
+    projectName: 'PipelineSnyk'
+    organization: 'b94ca70a-c110-4f1e-a54f-98475562885b'
