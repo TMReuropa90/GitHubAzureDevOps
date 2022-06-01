@@ -19,10 +19,10 @@ variables:
   inputs:
     serviceConnectionEndpoint: 'Test'
     testType: 'app'
-    targetFile: 'azure-pipelines.yml'
+    targetFile: 'MyConsoleApp/MyConsoleApp.csproj'
     monitorWhen: 'always'
     failOnIssues: true
-    projectName: 'SnykPipelines'
+    projectName: 'PipelineSnyk'
     organization: 'b94ca70a-c110-4f1e-a54f-98475562885b'
 
 steps:
