@@ -31,5 +31,6 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'Test'
     testType: 'app'
+    targetFile: '/'
     monitorWhen: 'always'
     failOnIssues: true
